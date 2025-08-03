@@ -59,12 +59,18 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="action-section flex gap-3">
-        <ButtonSolidLight
-          title="Download CV"
-          styles={`${
-            background ? "bg-[#DFD4D8] text-[#7B3B4b] hover:bg-[#c4babe]" : ""
-          }`}
-        />
+        <Link
+          href="https://flowcv.com/resume/6lks5ts7d9vm"
+          download={true}
+          target="_blank"
+        >
+          <ButtonSolidLight
+            title="Download CV"
+            styles={`${
+              background ? "bg-[#DFD4D8] text-[#7B3B4b] hover:bg-[#c4babe]" : ""
+            }`}
+          />
+        </Link>
       </div>
     </nav>
   );
