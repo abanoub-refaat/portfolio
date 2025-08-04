@@ -28,8 +28,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` fixed w-full flex justify-between items-center px-8 py-3 ${
-        background ? "bg-[#7B3B4b]" : "bg-transparent"
+      className={` md:fixed w-full flex flex-col lg:flex-row justify-between transition-colors duration-300 items-center px-4 md:px-8 py-3 ${
+        background
+          ? "bg-[#DFD4D8] md:bg-[#7B3B4b]"
+          : "bg-[#DFD4D8] md:bg-transparent"
       }`}
     >
       <div className="name-section">
@@ -44,7 +46,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div
-        className={`links flex gap-5 text-lg font-bold tracking-wide uppercase ${
+        className={`links flex gap-3 md:gap-5 text-sm md:text-lg font-bold md:tracking-wide uppercase ${
           background ? "text-[#DFD4D8]" : "text-[#7B3B4b]"
         } `}
       >
@@ -66,7 +68,7 @@ const Navbar = () => {
         >
           <ButtonSolidLight
             title="Download CV"
-            styles={`${
+            styles={`hidden lg:block ${
               background ? "bg-[#DFD4D8] text-[#7B3B4b] hover:bg-[#c4babe]" : ""
             }`}
           />
