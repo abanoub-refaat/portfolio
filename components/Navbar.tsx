@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` md:fixed w-full flex flex-col lg:flex-row justify-between transition-colors duration-300 items-center px-4 md:px-8 py-3 ${
+      className={` md:fixed w-full flex flex-col lg:flex-row justify-between transition-colors duration-300 items-center px-4 md:px-8 py-3 lg:rounded-bl-3xl lg:rounded-br-3xl ${
         background
           ? "bg-[#DFD4D8] md:bg-[#7B3B4b]"
           : "bg-[#DFD4D8] md:bg-transparent"
