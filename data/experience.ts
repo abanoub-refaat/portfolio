@@ -1,14 +1,16 @@
 const experience = [
   {
+    id: 0,
     title: "Web Development Committee at TechTalent",
     subtitle: "",
     startDate: "11/2024",
     endDate: "Peresent",
-    location: "remote",
+    location: "Remote",
     describtion: "Contributed to frontend and backend development tasks.",
-    techStack: ["TypeScript", "Next.js", "Tailwind CSS", "GitHub"],
+    techStack: ["TypeScript", "Next.js", "Tailwind CSS", "GitHub", "Git"],
   },
   {
+    id: 1,
     title: "Front-end Developer Intern at EFG Holdings",
     subtitle: "",
     startDate: "01/07/2025",
@@ -21,28 +23,32 @@ const experience = [
       "Angular 20",
       "Next.js",
       "Tailwind CSS",
+      "SCRUM",
       "GitHub",
+      "Git",
     ],
   },
   {
+    id: 2,
     title: "Member of The Front-end Committee at Minders",
     subtitle: "",
     startDate: "02/2024",
     endDate: "09/2024",
     location: "Hybird",
     describtion: "",
-    techStack: ["HTML5", "CSS", "JavaScript", "GitHub"],
+    techStack: ["HTML5", "CSS", "JavaScript", "GitHub", "Git"],
   },
   {
+    id: 3,
     title: "The Web Development Challenger Track",
     subtitle:
       "egFWD - The Ministry of Communication and Information Technology's Scholarship",
     startDate: "09/2022",
     endDate: "10/2022",
-    location: "Online",
+    location: "Remote",
     describtion:
       "Developed a deeper understanding of web accessibility and performance optimization.",
-    techStack: ["HTML5", "CSS", "JavaScript", "GitHub"],
+    techStack: ["HTML5", "CSS", "JavaScript", "GitHub", "Git"],
   },
 ];
 
