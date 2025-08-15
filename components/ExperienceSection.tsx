@@ -9,26 +9,61 @@ const ExperienceSection = () => {
   return (
     <>
       <Swiper
-        spaceBetween={2}
-        slidesPerView={1}
+        spaceBetween={1}
+        slidesPerView={2}
         className={
-          "bg-[#DFD4D8] text-[#7B3B4b] items-center justify-center lg:rounded-tl-3xl lg:rounded-tr-3xl"
+          "bg-[#DFD4D8] p-r text-[#7B3B4b] items-center justify-center lg:rounded-tl-3xl lg:rounded-tr-3xl"
         }
         style={{
           display: "flex",
           flexDirection: "column-reverse",
-          padding: 10,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1440: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
         }}
       >
-        <p className="mb-3 lowercase">
-          note: Scroll right and left to see more of my experiences ...
+        <p className="mb-3 lowercase text-center text-sm md:text-lg">
+          note: Scroll right or left to see more of my experiences ...
         </p>
         <h2 className="font-extrabold mt-3 text-3xl uppercase md:text-4xl">
           My Experience
         </h2>
         {experience.map((exp) => {
           return (
-            <SwiperSlide key={exp.id}>
+            <SwiperSlide
+              key={exp.id}
+              style={{
+                display: "flex",
+                height: "max-content",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <ExperienceCard
                 id={exp.id}
                 title={exp.title}
