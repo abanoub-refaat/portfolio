@@ -12,7 +12,7 @@ const ExperienceSection = () => {
         spaceBetween={1}
         slidesPerView={2}
         className={
-          "bg-[#DFD4D8] p-r text-[#7B3B4b] items-center justify-center lg:rounded-tl-3xl lg:rounded-tr-3xl"
+          "bg-[#DFD4D8] text-[#7B3B4b] items-center justify-center lg:rounded-tl-3xl lg:rounded-tr-3xl"
         }
         style={{
           display: "flex",
@@ -23,27 +23,27 @@ const ExperienceSection = () => {
         breakpoints={{
           320: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 1,
           },
           480: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 1,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 5,
           },
-          1024: {
+          524: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 5,
           },
           1280: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 5,
           },
           1440: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 5,
           },
         }}
       >
@@ -58,11 +58,10 @@ const ExperienceSection = () => {
             <SwiperSlide
               key={exp.id}
               style={{
-                display: "flex",
-                height: "max-content",
-                justifyContent: "center",
-                alignItems: "center",
+                marginRight: 0,
+                height: "auto",
               }}
+              className="!flex !items-stretch"
             >
               <ExperienceCard
                 id={exp.id}

@@ -17,9 +17,9 @@ const ExperienceCard = ({ ...props }: Props) => {
   return (
     <section
       key={props.id}
-      className=" justify-center items-center bg-white rounded-3xl p-6 m-2"
+      className="flex flex-col items-start bg-white rounded-3xl p-6 m-2"
     >
-      <div className="main-info felx flex-col gap-2">
+      <div className="main-info felx flex-col justify-start gap-2">
         <div className="title-date-section gap-2 flex justify-between">
           <h3 className="font-bold text-lg">{props.title}</h3>
           <p className="date text-sm">
