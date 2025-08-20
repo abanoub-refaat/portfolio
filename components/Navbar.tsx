@@ -50,13 +50,28 @@ const Navbar = () => {
           background ? "text-[#DFD4D8]" : "text-[#7B3B4b]"
         } `}
       >
-        <Link href="/" className="hover:text-[#7b3b4bd3]">
+        <Link
+          href="/"
+          className={`${
+            background ? "hover:text-white" : "hover:text-[#7b3b4bd3]"
+          }`}
+        >
           Home
         </Link>
-        <Link href="/Projects" className="hover:text-[#7b3b4bd3]">
-          Projects
+        <Link
+          href="#experience-section"
+          className={`${
+            background ? "hover:text-white" : "hover:text-[#7b3b4bd3]"
+          }`}
+        >
+          Experience
         </Link>
-        <Link href="/About" className="hover:text-[#7b3b4bd3]">
+        <Link
+          href="/About"
+          className={`${
+            background ? "hover:text-white" : "hover:text-[#7b3b4bd3]"
+          }`}
+        >
           About
         </Link>
       </div>

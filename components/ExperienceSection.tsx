@@ -14,6 +14,7 @@ const ExperienceSection = () => {
         className={
           "bg-[#DFD4D8] text-[#7B3B4b] items-center justify-center lg:rounded-tl-3xl lg:rounded-tr-3xl"
         }
+        id="experience-section"
         style={{
           display: "flex",
           flexDirection: "column-reverse",
