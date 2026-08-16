@@ -20,7 +20,12 @@ export const HeroSection = () => {
 
         <div className="flex flex-row gap-3">
           <LinkButton title="Explore the Projects" isPrimary={true} link={""} />
-          <LinkButton title="Download Resume" isPrimary={false} link={""} />
+          <LinkButton
+            title="Download Resume"
+            isPrimary={false}
+            link={""}
+            download
+          />
         </div>
       </div>
       <div className="flex flex-col">
