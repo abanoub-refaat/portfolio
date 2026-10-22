@@ -1,36 +1,80 @@
-import { about } from "@/data/about";
+"use client";
+
+import React from "react";
 import Image from "next/image";
-import heroSectionImage from "@/public/icons/14723864_People_in_programming_01ung_01.svg";
-import { LinkButton } from "./UI/LinkButton";
+import { about } from "@/data/about";
+import { filterCategories } from "@/data/projectsData";
+import { Icon } from "./Icon";
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  activeFilter: string | null;
+  onFilterChange: (filter: string | null) => void;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({
+  activeFilter,
+  onFilterChange,
+}) => {
+  const handleFilterClick = (label: string) => {
+    // If clicking already active filter, toggle off to show all
+    if (activeFilter === label) {
+      onFilterChange(null);
+    } else {
+      onFilterChange(label);
+    }
+  };
+
   return (
-    <div className="flex flex-col lg:flex-row p-3 gap-4 lg:gap-6 justify-center items-center">
-      <div className="info-section flex flex-col gap-3 lg:w-1/2">
-        <div className="bg-emerald-50 border border-emerald-700 text-black text-xs font-medium px-1.5 py-0.5 rounded-full w-fit">
-          {about.openToWork ? (
-            <p> 🟢 Open To Work on roles {about.roles.join(" • ")}</p>
-          ) : (
-            <p>Currently Working ...</p>
-          )}
+    <section className="hero" id="home">
+      <div className="hero-content page-shell">
+        <div className="hero-copy">
+          <span className="eyebrow">{about.eyebrow}</span>
+          <h1>
+            {about.name}
+            <em>{about.roleItalic1}</em>
+            <em>&amp; {about.roleItalic2}</em>
+          </h1>
+          <p>{about.summary}</p>
+          <a className="hero-link" href="#projects">
+            Explore selected work <Icon name="arrow" />
+          </a>
         </div>
-        <h1 className="text-6xl font-bold">{about.name}</h1>
-        <p className="text-2xl italic">{about.subtitle}</p>
-        <p className="max-w-2xl">{about.summary}</p>
 
-        <div className="flex flex-row gap-3">
-          <LinkButton title="Explore the Projects" isPrimary={true} link={""} />
-          <LinkButton
-            title="Download Resume"
-            isPrimary={false}
-            link={""}
-            download
+        <div className="portrait-frame">
+          <div className="portrait-orbit" />
+          <Image
+            src={about.portraitUrl}
+            alt={`Portrait of ${about.name}`}
+            width={820}
+            height={1000}
+            priority
+            unoptimized
           />
+          <span className="portrait-tag">{about.greetingTag}</span>
         </div>
       </div>
-      <div className="flex flex-col">
-        <Image src={heroSectionImage} alt="Picture of the author" />
+
+      <div
+        className="filter-dock page-shell"
+        aria-label="Filter work by discipline"
+      >
+        {filterCategories.map((filter) => {
+          const isActive = activeFilter === filter.label;
+          return (
+            <button
+              className={isActive ? "filter active" : "filter"}
+              key={filter.label}
+              onClick={() => handleFilterClick(filter.label)}
+              type="button"
+              title={`Filter projects by ${filter.label}`}
+              aria-pressed={isActive}
+            >
+              <Icon name={filter.icon} />
+              <span>{filter.label}</span>
+            </button>
+          );
+        })}
       </div>
-    </div>
+    </section>
   );
 };

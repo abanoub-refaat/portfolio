@@ -1,10 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@/styles/global.css";
 
 export const metadata: Metadata = {
-  title: "Abanoub Refaat - Portfolio",
+  title: "Abanoub Refaat — Software Engineer & Designer",
   description:
-    "Welcome to my personal Portfolio, looking forward to working with you.",
+    "Personal portfolio of Abanoub Refaat. Specialized in building offline-first apps, scalable systems, and modern web experiences.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#463f3a",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -14,6 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

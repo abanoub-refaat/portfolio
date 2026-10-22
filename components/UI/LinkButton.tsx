@@ -17,7 +17,7 @@ export const LinkButton = ({ title, link, isPrimary, download }: Prop) => {
       title={title}
       href={link}
       download={download}
-      className={`px-5 py-2.5 justify-center items-center rounded-lg font-medium transition-colors duration-150  w-47 ${variantClasses}`}
+      className={`px-5 py-2.5 justify-center items-center rounded-full font-medium transition-colors duration-150  w-47 ${variantClasses}`}
     >
       {title}
     </Link>
