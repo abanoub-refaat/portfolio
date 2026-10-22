@@ -1,55 +1,36 @@
-# Abanoub Refaat — Portfolio
+# Hi there, I'm Abanoub Refaat 👋
 
-Personal portfolio site showcasing my work across frontend, mobile, and systems development.
+[![Open to Work](https://img.shields.io/badge/Open%20To%20Work-Yes-brightgreen?style=flat-square)](https://github.com/abanoub-refaat)
+[![Location](https://img.shields.io/badge/Location-Cairo%2C%20Egypt-blue?style=flat-square)](https://github.com/abanoub-refaat)
 
-🔗 **Live site:** _add Vercel URL once deployed_
-💼 **LinkedIn:** [linkedin.com/in/abanoubrefaat](https://linkedin.com/in/abanoubrefaat)
-🐙 **GitHub:** [github.com/abanoub-refaat](https://github.com/abanoub-refaat)
+Software Engineer with a B.Sc. in Computer Science from Cairo University, specializing in full-stack web development, cross-platform mobile apps, and machine learning pipelines. Passionate about building performant, offline-first applications and robust distributed systems.
 
 ---
 
-## About
+## 🚀 Tech Stack & Skills
 
-Computer Science student (Cairo University) working across the frontend, mobile, and systems/security stack — from React and React Native to Python-based network security tooling. This site is a single-page showcase of the projects I've shipped.
+* **Frontend:** Next.js, React.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Vite, Bootstrap, SASS
+* **Backend & Databases:** Node.js, Express.js, Java, Python, REST APIs, MongoDB, PostgreSQL, Oracle XE, Firebase, Hibernate, SQL
+* **Mobile Development:** React Native, Expo, Offline-First Sync, Kotlin, Dart, Jetpack Compose
+* **AI / ML & Tools:** TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Scapy, PySide6, Docker, Git/GitHub, Linux (Fedora/Ubuntu)
 
-## Tech Stack
+---
 
-- **Framework:** Next.js (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Deployment:** Vercel
+## 🛠️ Featured Projects
 
-## Featured Projects
+* **Odorata** — Luxury fragrance e-commerce storefront featuring a product catalog, TanStack Query caching, and Zustand state management (*Next.js, TypeScript, Tailwind CSS*).
+* **Aethel** — Mobile app automating device wallpaper rotation with classical art and AI-generated stories (*React Native, Expo, Groq APIs*).
+* **Ironwall** — Network security AI agent featuring ML anomaly detection, Scapy packet sniffing, and a PySide6 live dashboard (*Python, PySide6, Scapy, TensorFlow*).
+* **California Housing ML** — End-to-end machine learning regression pipeline for predicting housing prices featuring robust feature engineering and evaluation (*Python, Scikit-learn, Pandas*).
+* **Arabic Digit Recognition CNN** — Deep learning image classification model utilizing Convolutional Neural Networks to recognize handwritten Arabic digits (*Python, TensorFlow, CNN*).
+* **Cine Sphere** — Multi-page OTT platform user interface built from scratch with reusable component architecture (*Next.js, TypeScript, Tailwind CSS*).
+* **Homy** — Full-stack student housing mobile app with real-time Firebase integration and role-based admin access (*React Native, Firebase, AsyncStorage*).
 
-### Aethel
+---
 
-Classical art wallpaper Android app — React Native/Expo, Groq API (Llama 3.3 70B) for AI story generation, Wikimedia Commons integration, custom Kotlin native wallpaper module, offline caching.
-[GitHub →](https://github.com/abanoub-refaat/aethel-mobile)
+## 📫 How to Reach Me
 
-### Ironwall
-
-AI-driven Endpoint Detection & Response desktop app — PyQt6/PySide6, real-time packet sniffing (Scapy), ML-based anomaly detection and attack classification, automated mitigation via iptables/netsh.
-
-### Homy
-
-Full-stack student housing mobile app with real-time Firebase integration.
-
-### CineSphere
-
-Multi-page OTT web platform UI — Next.js, TypeScript, Tailwind CSS.
-[GitHub →](https://github.com/abanoub-refaat/cine-sphere-app)
-
-## Running Locally
-
-```bash
-git clone https://github.com/abanoub-refaat/portfolio.git
-cd portfolio
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view it.
-
-## License
-
-MIT
+* **Email:** abanoubref3at18@gmail.com
+* **LinkedIn:** [Abanoub Refaat](https://linkedin.com/in/abanoub-refaat)
+* **GitHub:** [@abanoub-refaat](https://github.com/abanoub-refaat)
+* **Location:** Cairo, Egypt
