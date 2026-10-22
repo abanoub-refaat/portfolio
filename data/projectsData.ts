@@ -69,6 +69,9 @@ export const projects: Project[] = [
     mark: "CHM",
     description:
       "End-to-end machine learning regression pipeline for predicting housing prices featuring feature engineering and model evaluation.",
+    link: "https://github.com/abanoub-refaat/california-housing-end-to-end-ml",
+    githubUrl:
+      "https://github.com/abanoub-refaat/california-housing-end-to-end-ml",
   },
   {
     name: "Arabic Digit Recognition CNN",
@@ -78,6 +81,9 @@ export const projects: Project[] = [
     mark: "ADR",
     description:
       "Deep learning image classification model utilizing Convolutional Neural Networks (CNNs) to recognize handwritten Arabic digits.",
+    link: "https://github.com/abanoub-refaat/arabic-handwritten-digit-recognition-cnn",
+    githubUrl:
+      "https://github.com/abanoub-refaat/arabic-handwritten-digit-recognition-cnn",
   },
   {
     name: "Diabetes Prediction Model",
@@ -87,6 +93,9 @@ export const projects: Project[] = [
     mark: "DBT",
     description:
       "Predictive classification model designed to assess diabetes risk using clinical health indicators and data preprocessing.",
+    link: "https://github.com/abanoub-refaat/gtc-diabetes-predection-model",
+    githubUrl:
+      "https://github.com/abanoub-refaat/gtc-diabetes-predection-model ",
   },
   {
     name: "Hotel Bookings Analysis",
@@ -96,6 +105,9 @@ export const projects: Project[] = [
     mark: "HBA",
     description:
       "Exploratory data analysis (EDA) and machine learning classification models built to predict hotel booking cancellations.",
+    link: "https://github.com/abanoub-refaat/gtc-ml-project1-hotel-bookings",
+    githubUrl:
+      "https://github.com/abanoub-refaat/gtc-ml-project1-hotel-bookings",
   },
   {
     name: "Brain Tumor Detection API",
