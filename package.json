@@ -12,6 +12,7 @@
     "next": "15.4.10",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "resend": "^6.34.1",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

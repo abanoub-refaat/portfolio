@@ -5,21 +5,61 @@ import { about } from "@/data/about";
 import { Icon } from "./Icon";
 import { SectionHeading } from "./SectionHeading";
 
+type FormStatus = "idle" | "submitting" | "success" | "error";
+
 export const ContactSection: React.FC = () => {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    _honey: "",
   });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => {
-      setSent(false);
-    }, 5000);
+
+    // Discard silently if honeypot was filled by a spam bot
+    if (formData._honey) {
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "", _honey: "" });
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _honey: formData._honey,
+        }),
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(
+          data?.error || "Unable to send your message. Please try again.",
+        );
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "", _honey: "" });
+      setTimeout(() => setStatus("idle"), 6000);
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setStatus("error");
+      setErrorMessage(
+        err instanceof Error ? err.message : "An unexpected error occurred.",
+      );
+    }
   };
 
   return (
@@ -71,10 +111,25 @@ export const ContactSection: React.FC = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
+          {/* Honeypot field to filter spam bots */}
+          <input
+            type="text"
+            name="_honey"
+            value={formData._honey}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, _honey: e.target.value }))
+            }
+            style={{ display: "none" }}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
+
           <label>
             <span>Name</span>
             <input
               required
+              name="name"
               placeholder="Your name"
               value={formData.name}
               onChange={(e) =>
@@ -88,6 +143,7 @@ export const ContactSection: React.FC = () => {
             <input
               required
               type="email"
+              name="email"
               placeholder="hello@example.com"
               value={formData.email}
               onChange={(e) =>
@@ -100,6 +156,7 @@ export const ContactSection: React.FC = () => {
             <span>Message</span>
             <textarea
               required
+              name="message"
               rows={4}
               placeholder="Tell me a little about your project..."
               value={formData.message}
@@ -109,8 +166,27 @@ export const ContactSection: React.FC = () => {
             />
           </label>
 
-          <button className="submit" type="submit">
-            {sent ? (
+          {status === "error" && (
+            <div className="contact-error" role="alert">
+              <p>{errorMessage}</p>
+              <a
+                href={`mailto:${about.email}?subject=Portfolio%20Inquiry%20from%20${encodeURIComponent(
+                  formData.name || "Portfolio Visitor",
+                )}&body=${encodeURIComponent(formData.message)}`}
+              >
+                Send directly via {about.email}
+              </a>
+            </div>
+          )}
+
+          <button
+            className="submit"
+            type="submit"
+            disabled={status === "submitting"}
+          >
+            {status === "submitting" ? (
+              <>Sending message...</>
+            ) : status === "success" ? (
               <>
                 Message sent — thank you <Icon name="check" />
               </>

@@ -10,6 +10,7 @@ export interface About {
   roles: string[];
   location: string;
   greetingTag: string;
+  email: string;
   portraitUrl: string;
   officeUrl: string;
 }
@@ -31,6 +32,7 @@ export const about: About = {
     "Frontend Developer",
   ],
   location: "Cairo, Egypt",
+  email: "abanoubref3at18@gmail.com",
   greetingTag: "HELLO, I’M ABANOUB",
   portraitUrl:
     "https://res.cloudinary.com/dynw2az0g/image/upload/v1792686494/copy_of_picsart_26-06-30_13-48-53-519_pkowr3.png",
