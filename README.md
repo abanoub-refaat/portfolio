@@ -31,6 +31,6 @@ Software Engineer with a B.Sc. in Computer Science from Cairo University, specia
 ## 📫 How to Reach Me
 
 * **Email:** abanoubref3at18@gmail.com
-* **LinkedIn:** [Abanoub Refaat](https://linkedin.com/in/abanoub-refaat)
+* **LinkedIn:** [Abanoub Refaat](https://www.linkedin.com/in/abanoubrefaat/)
 * **GitHub:** [@abanoub-refaat](https://github.com/abanoub-refaat)
 * **Location:** Cairo, Egypt
